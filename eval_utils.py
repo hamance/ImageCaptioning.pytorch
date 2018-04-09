@@ -134,7 +134,7 @@ def eval_split(model, crit, loader, eval_kwargs={}):
         if num_images >= 0 and n >= num_images:
             break
 
-    lang_stats = None
+    lang_stats = {} # None
     if lang_eval == 1:
         lang_stats = language_eval(dataset, predictions, eval_kwargs['id'], split)
 
